@@ -2,6 +2,7 @@
 pub struct Container {
     pub image: String,
     pub id: String,
+    pub ip: i32,
 }
 
 #[derive(Debug, Clone)]
@@ -9,6 +10,7 @@ pub struct Daimon {
     pub image: String,
     pub count: usize,
     pub containers: Vec<Container>,
+    pub ip_block: Vec<i32>,
 }
 
 impl Daimon {
@@ -17,6 +19,7 @@ impl Daimon {
             image,
             count,
             containers: Vec::new(),
+            ip_block: Vec::new(),
         }
     }
 
@@ -24,6 +27,7 @@ impl Daimon {
         self.containers.push(Container {
             image: self.image.clone(),
             id,
+            ip: self.ip_block.pop().unwrap_or_default(),
         });
     }
 }
