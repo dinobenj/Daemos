@@ -1,0 +1,4 @@
+Daemos is a docker container orchestrator and monitoring tool meant to be dead simple in cases where all you need are load balancers for containers recieving gRPC.
+- Use it to spin up a Daimon (not daemon lmao) of containers being load balanced by a, you guessed it, load balancer
+- Dont use this shit its unfinished and more of a personal project to get better with rust and gRPC
+- Maybe one day it will be useable lmao
